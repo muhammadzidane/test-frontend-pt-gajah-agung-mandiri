@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
  * @param children The content inside the sidebar item
  * @param icon The icon identifier for the sidebar item
  */
-const SidebarItem: React.FC<SidebarItemProps> = ({ children, icon }) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({ children, icon, src }) => {
   const pathname = usePathname();
   const activeClass = classNames({
     "flex gap-2 items-center hover:bg-gray-1-700 px-4 py-2": true,
@@ -20,7 +20,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ children, icon }) => {
   });
 
   return (
-    <Link href={`/${icon}`}>
+    <Link href={src}>
       <div className="cursor-pointer">
         <div className={activeClass}>
           <Image

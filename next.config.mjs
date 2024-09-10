@@ -6,13 +6,23 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
   async rewrites() {
     return [
       {
         source: '/',
-        destination: '/dashboard',
+        destination: '/product',
       },
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "cdn.dummyjson.com",
+        protocol: "https",
+        port: "",
+      },
+    ],
   },
 };
 

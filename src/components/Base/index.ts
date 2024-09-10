@@ -1,3 +1,4 @@
+export { default as ProductCard } from "./ProductCard";
 export { default as DatePicker } from "./DatePicker";
 export { default as InputGroup } from "./InputGroup";
 export { default as CheckBox } from "./Checkbox";
