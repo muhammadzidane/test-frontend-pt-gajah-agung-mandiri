@@ -1,17 +1,23 @@
 import React from "react";
 
-import { ProductCard, Pagination } from "@/components";
+import { ProductCard, Pagination, SortButton } from "@/components";
 import { fetchProductList } from "@/fetch";
 
 /**
  * ProductList Component
  */
-const ProductList = async ({ page = "1" }: Params) => {
-  const productList = await fetchProductList({ limit: "12", skip: page });
+const ProductList = async ({ order = "", page = "1" }: Params) => {
+  const productList = await fetchProductList({
+    limit: "12",
+    skip: page,
+    order,
+  });
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="font-semibold text-lg">Product List</div>
+      <div>
+        <SortButton />
+      </div>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         {productList.products.map((product, productIndex) => (
           <ProductCard

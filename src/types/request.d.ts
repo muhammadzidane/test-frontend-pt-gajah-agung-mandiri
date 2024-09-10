@@ -2,6 +2,7 @@ type UnknownParams = Record<string, string> | undefined;
 
 interface Params extends UnknownParams {
   limit?: string;
+  order?: string;
   page?: string;
 }
 

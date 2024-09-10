@@ -17,7 +17,7 @@ const Product: React.FC<ParamPageProps> = ({ searchParams }) => {
       </div>
 
       <Suspense fallback={<ProductListSkeleton />}>
-        <ProductList page={searchParams.page} />
+        <ProductList order={searchParams.order} page={searchParams.page} />
       </Suspense>
     </div>
   );

@@ -2,6 +2,7 @@ export { default as ProductCard } from "./ProductCard";
 export { default as DatePicker } from "./DatePicker";
 export { default as InputGroup } from "./InputGroup";
 export { default as Pagination } from "./Pagination";
+export { default as SortButton } from "./SortButton";
 export { default as CheckBox } from "./Checkbox";
 export { default as TextArea } from "./TextArea";
 export { default as Skeleton } from "./Skeleton";
