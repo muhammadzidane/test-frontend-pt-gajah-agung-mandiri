@@ -1,13 +1,13 @@
 import React from "react";
 
 import { ProductCard } from "@/components";
-import { productFetchList } from "@/fetch";
+import { fetchProductList } from "@/fetch";
 
 /**
- * OverviewTable Component
+ * ProductList Component
  */
-const OverviewTable = async ({ page = "1" }: Params) => {
-  const productList = await productFetchList({ limit: "10", page });
+const ProductList = async ({ page = "1" }: Params) => {
+  const productList = await fetchProductList({ limit: "10", page });
 
   return (
     <div>
@@ -28,4 +28,4 @@ const OverviewTable = async ({ page = "1" }: Params) => {
   );
 };
 
-export default OverviewTable;
+export default ProductList;

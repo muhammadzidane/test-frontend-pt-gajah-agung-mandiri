@@ -5,3 +5,9 @@ interface ChildrenProps {
 interface ParamPageProps {
   searchParams: Record<string, undefined | string>;
 }
+
+interface PageParamIdProps {
+  params: {
+    id: number;
+  };
+}

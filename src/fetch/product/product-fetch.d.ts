@@ -1,5 +1,23 @@
-interface ProductResponse extends BaseResponseApi {
-  products: Product[];
+// Product List
+interface ProductDimensions {
+  height: number;
+  width: number;
+  depth: number;
+}
+
+interface ProductReview {
+  reviewerEmail: string;
+  reviewerName: string;
+  comment: string;
+  rating: number;
+  date: string;
+}
+
+interface ProductMeta {
+  createdAt: string;
+  updatedAt: string;
+  barcode: string;
+  qrCode: string;
 }
 
 interface Product {
@@ -26,24 +44,13 @@ interface Product {
   sku: string;
   id: number;
 }
-
-interface ProductDimensions {
-  height: number;
-  width: number;
-  depth: number;
+interface ProductListResponse extends BaseResponseApi {
+  products: Product[];
 }
 
-interface ProductReview {
-  reviewerEmail: string;
-  reviewerName: string;
-  comment: string;
-  rating: number;
-  date: string;
-}
+// Product detail
+interface ProductDetailResponse extends Product {}
 
-interface ProductMeta {
-  createdAt: string;
-  updatedAt: string;
-  barcode: string;
-  qrCode: string;
+interface ProductDetailPath {
+  id: number;
 }

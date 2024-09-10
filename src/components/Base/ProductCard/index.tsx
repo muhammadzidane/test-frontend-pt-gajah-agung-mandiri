@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <h2 className="text-xl font-semibold mb-2">{title}</h2>
         <p className="text-gray-600 mb-2 line-clamp-2">{description}</p>
         <p className="text-lg font-bold mb-4">${price.toFixed(2)}</p>
-        <Link href={`/products/${id}`}>
+        <Link href={`/product/${id}`}>
           <div className="text-blue-500 hover:underline">View Details</div>
         </Link>
       </div>

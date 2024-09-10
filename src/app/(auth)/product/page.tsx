@@ -2,22 +2,22 @@ import React, { Suspense } from "react";
 
 import { type Metadata } from "next";
 
-import { OverviewTable } from "./components";
+import { ProductListSkeleton, ProductList } from "./components";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Products - Test Frontend",
   description: "...",
 };
 
 const Product: React.FC<ParamPageProps> = ({ searchParams }) => {
   return (
     <div>
-      <div className="mb-4 font-semibold text-xl text-green-700">
+      <div className="mb-10 font-semibold text-xl text-green-700">
         Welcome to our Product
       </div>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <OverviewTable page={searchParams.page} />
+      <Suspense fallback={<ProductListSkeleton />}>
+        <ProductList page={searchParams.page} />
       </Suspense>
     </div>
   );
