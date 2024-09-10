@@ -28,16 +28,16 @@ const ProductDetail = async ({ params }: PageParamIdProps) => {
             height={0}
             width={0}
           />
-          {/* {images.length > 1 && (
+          {product.images.length > 1 && (
             <>
+              <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full shadow-lg">
+                &#8249;
+              </button>
+              <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full shadow-lg">
+                &#8250;
+              </button>
             </>
-          )} */}
-          <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full shadow-lg">
-            &#8249;
-          </button>
-          <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full shadow-lg">
-            &#8250;
-          </button>
+          )}
         </div>
         <div className="p-4">
           <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
