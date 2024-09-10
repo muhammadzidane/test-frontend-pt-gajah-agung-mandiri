@@ -11,7 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden">
       <Image
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-contain"
         src={imageUrl}
         sizes="100vw"
         alt={title}
